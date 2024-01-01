@@ -2,9 +2,9 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
 
@@ -70,31 +70,30 @@ export default function App() {
 
   return (
     <div id="body" style={myStyle}>
-      {/* <Router> */}
-      <Navbar
-        logo="TextUtils"
-        link1="Home"
-        link2="About"
-        myStyle={myStyle}
-        toggleStyle={toggleStyle}
-        themeIcon={themeIcon}
-      />
-      <hr />
-      <Alert alert={alert} />
-      <div className="container my-3 ">
-        <TextForm myStyle={myStyle} showAlert={showAlert} />
-        {/* <Routes> */}
-        {/* <Route
+      <Router>
+        <Navbar
+          logo="TextUtils"
+          link1="Home"
+          link2="About"
+          myStyle={myStyle}
+          toggleStyle={toggleStyle}
+          themeIcon={themeIcon}
+        />
+        <hr />
+        <Alert alert={alert} />
+        <div className="container my-3 ">
+          <Routes>
+            <Route
               path="/"
               element={<TextForm myStyle={myStyle} showAlert={showAlert} />}
-            /> */}
-        {/* <Route
+            />
+            <Route
               path="/about"
               element={<About toggleStyle={toggleStyle} myStyle={myStyle} />}
-            /> */}
-        {/* </Routes> */}
-      </div>
-      {/* </Router> */}
+            />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
