@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+textarea::placeholder{
+    color: inherit !important;
+}
+
+#body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.theme-btn {
+    box-shadow: 2px 2px 10px gray;
+}
